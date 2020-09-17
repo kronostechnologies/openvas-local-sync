@@ -54,6 +54,8 @@ else
         ERROR=1
 fi
 
+sleep 5
+
 echo "INFO: Syncing SCAP feed"
 date
 if rsync -ltvrP $RSYNC_DELETE_SCAP "$COMMUNITY_SCAP_RSYNC_FEED" "$SCAP_DIR" ;then
@@ -62,6 +64,8 @@ else
         echo "ERROR: Cannot sync SCAP feed"
         ERROR=1
 fi
+
+sleep 5
 
 echo "INFO: Syncing CERT feed"
 date
